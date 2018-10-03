@@ -29,7 +29,11 @@ const DataFlexContainer = styled.div`
 	p {
 		flex: 1 1 50%;
 		margin: 0.3em 0;
-		//padding: 0.2em;
+		font-size: 0.85rem;
+	}
+
+	p:nth-child(2) {
+		font-size: 1rem;
 	}
 `;
 
@@ -58,7 +62,7 @@ class Day extends Component {
 					<p>{this.props.date}</p>
 					<p>{Math.round(this.props.temperature)} &#8457;</p>
 					<p>Humidity: {this.props.humidity}</p>
-					<p>Wind: {this.props.wind} MPH</p>
+					<p>Wind: {this.props.wind} mph</p>
 					<p>Forecast: {this.props.forecast}</p>
 				</DataFlexContainer>
 			</FlexContainer>

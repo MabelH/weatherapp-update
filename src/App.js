@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const Header = styled.header`
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   h1 {
     text-align: center;
     color: #282510;
@@ -24,11 +24,11 @@ const FlexContainer = styled.div`
 `;
 
 const Form = styled.form`
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 
   label {
     text-align: center;
-    padding-left: 1em;
+    padding-left: 0.7em;
   }
 `;
 
@@ -37,7 +37,7 @@ const Button = styled.button`
   color: #282510;
   font-size: 1rem;
   padding: 0.5em 0.5em;
-  margin-left: 1em;
+  margin-left: 0.5em;
   text-align: center;
 `;
 
@@ -168,8 +168,8 @@ class App extends Component {
               Seach:{" "}
               <input
                 type="text"
-                placeholder="Enter address, city or zipcode"
-                size="25"
+                placeholder="address, city or zipcode"
+                size="18"
                 name="location"
                 autoFocus={true}
                 onChange={event => {

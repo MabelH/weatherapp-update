@@ -4,11 +4,10 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
 	background-color: #b6d471;
-	padding: 1em;
+	padding: 0.5em;
 `;
 
 const TopRow = styled.div`
-	//background-color: red;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -23,6 +22,7 @@ const TopRow = styled.div`
 	p {
 		font-size: 2rem;
 		font-weight: bold;
+		margin: 0;
 	}
 `;
 
@@ -36,8 +36,9 @@ const OtherRow = styled.div`
 
 	p {
 		flex: 1;
-		margin: 0.3em 0;
+		margin: 0.2em 0;
 		padding: 0.1em;
+		font-size: 0.9rem;
 	}
 `;
 
