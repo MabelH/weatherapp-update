@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { WeatherCall } from "../api.js";
 
 import styled from "styled-components";
 
+const Wrapper = styled.div`
+	background-color: #b6d471;
+	padding: 1em;
+`;
+
 const TopRow = styled.div`
+	//background-color: red;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -13,6 +18,11 @@ const TopRow = styled.div`
 
 	img {
 		padding: 0 1em;
+	}
+
+	p {
+		font-size: 2rem;
+		font-weight: bold;
 	}
 `;
 
@@ -42,7 +52,7 @@ class CurrentTemp extends Component {
 
 	render() {
 		return (
-			<div>
+			<Wrapper>
 				<TopRow>
 					<img
 						src={`http://openweathermap.org/img/w/${
@@ -55,7 +65,6 @@ class CurrentTemp extends Component {
 					<p>{this.props.temp} &#8457;</p>
 				</TopRow>
 				<OtherRow>
-					
 					<p>{this.props.location}</p>
 				</OtherRow>
 				<OtherRow>
@@ -65,7 +74,7 @@ class CurrentTemp extends Component {
 					<p>Humidity: {this.props.humidity}</p>
 					<p>Wind: {this.props.wind}</p>
 				</OtherRow>
-			</div>
+			</Wrapper>
 		);
 	}
 }

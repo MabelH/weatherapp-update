@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import Day from "./Day";
 import styled from "styled-components";
 
 const ListContainer = styled.ul`
 	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 `;
 
-//ADD a KEY
 function DayList(props) {
 	const days = props.days;
 	const listofDays = days.map((number, index) => (

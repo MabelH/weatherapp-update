@@ -3,7 +3,9 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const FlexContainer = styled.div`
+	background-color: #fcc151;
 	border-style: solid;
+	border-color: #fcab10;
 	border-width: thin;
 	display: flex;
 	flex-direction: row;
@@ -48,8 +50,8 @@ class Day extends Component {
 					src={`http://openweathermap.org/img/w/${
 						this.props.icon
 					}.png`}
-					width="40"
-					height="40"
+					width="56"
+					height="56"
 					alt="weather icon"
 				/>
 				<DataFlexContainer>
