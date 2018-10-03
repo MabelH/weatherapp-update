@@ -1,4 +1,3 @@
-//import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom";
 // ----- styles/index.js
@@ -13,6 +12,10 @@ injectGlobal`
 
   // You can continue writing global styles
   body {
+  	//background-color: #fcc151;
+  	background-color: #d6605E;
+  	font-family: 'Pontano Sans', sans-serif;
+  	letter-spacing: 2px;
    
   }
 `;
