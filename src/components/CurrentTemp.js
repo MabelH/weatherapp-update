@@ -45,23 +45,25 @@ class CurrentTemp extends Component {
 			<div>
 				<TopRow>
 					<img
-						src={`http://openweathermap.org/img/w/10n.png`}
-						width="60"
-						height="60"
+						src={`http://openweathermap.org/img/w/${
+							this.props.newicon
+						}.png`}
+						width="70"
+						height="70"
+						alt="current weather icon"
 					/>
-					<p>76 &#8457;</p>
+					<p>{this.props.temp} &#8457;</p>
 				</TopRow>
 				<OtherRow>
-					<p>October 2</p>
-					<p>New York</p>
+					
+					<p>{this.props.location}</p>
 				</OtherRow>
 				<OtherRow>
-					<p>Forecast: Broken clouds</p>
+					<p>Forecast: {this.props.forecast}</p>
 				</OtherRow>
 				<OtherRow>
-					<p>73 / 79 F</p>
-					<p>Humidity: 63</p>
-					<p>Wind: 8 mph</p>
+					<p>Humidity: {this.props.humidity}</p>
+					<p>Wind: {this.props.wind}</p>
 				</OtherRow>
 			</div>
 		);

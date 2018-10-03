@@ -54,10 +54,10 @@ class Day extends Component {
 				/>
 				<DataFlexContainer>
 					<p>{this.props.date}</p>
-					<p>{this.props.temperature} &#8457;</p>
+					<p>{Math.round(this.props.temperature)} &#8457;</p>
 					<p>Humidity: {this.props.humidity}</p>
 					<p>Wind: {this.props.wind} MPH</p>
-					<p>forecast: {this.props.forecast}</p>
+					<p>Forecast: {this.props.forecast}</p>
 				</DataFlexContainer>
 			</FlexContainer>
 		);
