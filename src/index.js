@@ -11,12 +11,20 @@ injectGlobal`
   ${styledNormalize}
 
   // You can continue writing global styles
-  body {
-  	//background-color: #fcc151;
+  html {
+	box-sizing: border-box;
+  }
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+   body {
+  	
   	background-color: #d6605E;
   	font-family: 'Pontano Sans', sans-serif;
   	letter-spacing: 2px;
-   
   }
 `;
 

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -43,14 +42,6 @@ const OtherRow = styled.div`
 `;
 
 class CurrentTemp extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			list: {}
-		};
-	}
-
 	render() {
 		return (
 			<Wrapper>
