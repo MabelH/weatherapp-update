@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import DayList from "./components/DayList";
 import CurrentTemp from "./components/CurrentTemp";
+//import { getGeoLocation, fetchData } from "./api.js";
 import axios from "axios";
-
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -20,7 +20,7 @@ const FlexContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: centeer;
+  align-content: center;
 `;
 
 const Form = styled.form`
@@ -39,6 +39,21 @@ const Button = styled.button`
   padding: 0.5em 0.5em;
   margin-left: 0.5em;
   text-align: center;
+`;
+
+const CenterContainer = styled.div`
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-end;
+  flex-direction: column;
+`;
+
+const Container = styled.div`
+  height: 78vh;
 `;
 
 class App extends Component {
@@ -77,6 +92,9 @@ class App extends Component {
       .then(response => {
         let lat = response.data.results[0].geometry.location.lat;
         let lon = response.data.results[0].geometry.location.lng;
+        console.log(lat);
+        console.log(lon);
+        console.log("inside googleapi");
         this.fetchData(lat, lon);
       });
   };
@@ -128,10 +146,10 @@ class App extends Component {
 
           let data = acct.data.list;
 
-          /*Get weather only once a day. Since the api
-            provides eight entries per day, I'm only selecting
-            indexes that are divisible by eight. 
-          */
+          //Get weather only once a day. Since the api
+          // provides eight entries per day, I'm only selecting
+          // indexes that are divisible by eight.
+
           let days = data.filter((item, index) => {
             return index % 8 === 0;
           });
@@ -145,12 +163,22 @@ class App extends Component {
             currentHumidity: current.data.main.humidity,
             currentWind: current.data.wind.speed
           });
+
+          this.resetInput();
         })
       )
       .catch(function(error) {
         return error;
       });
   };
+
+  onInputChange = event => {
+    this.setState({ address: event.target.value });
+  };
+
+  resetInput() {
+    this.setState({ address: "" });
+  }
 
   componentDidMount() {
     this.fetchData();
@@ -159,7 +187,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header className="App-header">
+        <Header>
           <h1>Weather App</h1>
         </Header>
         <FlexContainer>
@@ -172,25 +200,30 @@ class App extends Component {
                 size="18"
                 name="location"
                 autoFocus={true}
-                onChange={event => {
-                  this.setState({ address: event.target.value });
-                }}
+                value={this.state.address}
+                onChange={this.onInputChange}
               />
             </label>
+
             <Button type="submit" value="Submit" onClick={this.getGeoLocation}>
               Lookup
             </Button>
           </Form>
         </FlexContainer>
-        <CurrentTemp
-          location={this.state.location}
-          newicon={this.state.currentIcon}
-          temp={Math.round(this.state.currentTemp)}
-          forecast={this.state.currentForecast}
-          humidity={this.state.currentHumidity}
-          wind={this.state.currentWind}
-        />
-        <DayList days={this.state.days} />
+
+        <Container>
+          <CenterContainer>
+            <CurrentTemp
+              location={this.state.location}
+              newicon={this.state.currentIcon}
+              temp={Math.round(this.state.currentTemp)}
+              forecast={this.state.currentForecast}
+              humidity={this.state.currentHumidity}
+              wind={this.state.currentWind}
+            />
+            <DayList days={this.state.days} />
+          </CenterContainer>
+        </Container>
       </div>
     );
   }
