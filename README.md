@@ -1,7 +1,7 @@
 # weather-app
 
 
-Working Demo: 
+Working Demo: https://salty-reaches-97290.herokuapp.com
 
 ## Project goals:
 
