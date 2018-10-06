@@ -53,7 +53,6 @@ class LocationInput extends Component {
 		this.setState({ address: "" });
 	}
 
-	//WORKING AT 1:54AM
 	handleClick = e => {
 		e.preventDefault();
 
