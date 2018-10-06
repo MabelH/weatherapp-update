@@ -67,7 +67,7 @@ class LocationInput extends Component {
 			<FlexContainer>
 				<Form action="/">
 					<label>
-						Seach:{" "}
+						Search:{" "}
 						<input
 							type="text"
 							placeholder="address, city or zipcode"
