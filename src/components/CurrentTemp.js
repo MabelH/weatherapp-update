@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -47,17 +48,16 @@ class CurrentTemp extends Component {
 			<Wrapper>
 				<TopRow>
 					<img
-						src={`http://openweathermap.org/img/w/${
-							this.props.newicon
-						}.png`}
-						width="70"
+						src={`http://openweathermap.org/img/w/${this.props
+							.icon || "10n"}.png`}
+						width="80"
 						height="70"
-						alt="current weather icon"
+						alt="icon"
 					/>
 					<p>{this.props.temp} &#8457;</p>
 				</TopRow>
 				<OtherRow>
-					<p>{this.props.location}</p>
+					<p>{this.props.city}</p>
 				</OtherRow>
 				<OtherRow>
 					<p>Forecast: {this.props.forecast}</p>
@@ -71,4 +71,15 @@ class CurrentTemp extends Component {
 	}
 }
 
-export default CurrentTemp;
+const mapStateToProps = state => {
+	return {
+		city: state.city,
+		icon: state.icon,
+		temp: state.temp,
+		forecast: state.forecast,
+		humidity: state.humidity,
+		wind: state.wind
+	};
+};
+
+export default connect(mapStateToProps)(CurrentTemp);

@@ -38,22 +38,12 @@ const DataFlexContainer = styled.div`
 `;
 
 class Day extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			list: {}
-		};
-	}
-
 	render() {
 		return (
 			<FlexContainer>
 				<img
-					/*src={`http://openweathermap.org/img/w/10n.png`}*/
-					src={`http://openweathermap.org/img/w/${
-						this.props.icon
-					}.png`}
+					src={`http://openweathermap.org/img/w/${this.props.icon ||
+						"10n"}.png`}
 					width="56"
 					height="56"
 					alt="weather icon"
