@@ -18,6 +18,8 @@ const Form = styled.form`
 	label {
 		text-align: center;
 		padding-left: 0.7em;
+		color: white;
+		font-size: 1rem;
 	}
 `;
 

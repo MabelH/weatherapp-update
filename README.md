@@ -3,7 +3,7 @@
 
 Working Demo: https://salty-reaches-97290.herokuapp.com
 
-![alt text](https://i.imgur.com/AHnl1yV.png "Weather app")
+![alt text](https://i.imgur.com/vMNGHVo.png "Weather app")
 
 ## Project goals:
 

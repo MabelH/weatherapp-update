@@ -21,7 +21,8 @@ injectGlobal`
 
    body {
     
-    background-color: #d6605E;
+    //background-color: #d6605E;
+     background-image: url("https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?cs=srgb&dl=road-nature-forest-33109.jpg&fm=jpg");
     font-family: 'Pontano Sans', sans-serif;
     letter-spacing: 2px;
   }

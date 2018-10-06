@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
 	background-color: #b6d471;
+	//background-color: #f06449;
 	padding: 0.5em;
 `;
 

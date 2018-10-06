@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const FlexContainer = styled.div`
-	background-color: #fcc151;
+	//background-color: #fcc151;
+	background-color: #f06449;
 	border-style: solid;
 	border-color: #fcab10;
 	border-width: thin;

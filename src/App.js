@@ -16,7 +16,8 @@ const Header = styled.header`
   padding-bottom: 0.5em;
   h1 {
     text-align: center;
-    color: #282510;
+    //color: #282510;
+    color: white;
   }
 `;
 
