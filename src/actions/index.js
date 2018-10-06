@@ -1,11 +1,11 @@
 import axios from "axios";
 import config from "../config.js";
-/* Function that returns an action with the payload location
-*/
 
 const GOOGLE_API_KEY = config.googleapis.key;
 const OPENWEATHERMAP_API_KEY = config.openweathermap.key;
 
+/* Function that returns an action with the payload location
+*/
 export function editLocation(location) {
   return {
     type: "EDIT_LOCATION",
@@ -62,7 +62,7 @@ export const getGeoLocation = location => {
       .get("https://maps.googleapis.com/maps/api/geocode/json?", {
         params: {
           address: location,
-          //key: process.env.REACT_APP_GEO_APIKEY
+
           key: GOOGLE_API_KEY
         }
       })
@@ -75,7 +75,7 @@ export const getGeoLocation = location => {
         );
       })
       .catch(function(error) {
-        console.log(error);
+        //console.log(error);
       });
   };
 };
