@@ -3,6 +3,8 @@
 
 Working Demo: https://salty-reaches-97290.herokuapp.com
 
+![alt text](https://i.imgur.com/AHnl1yV.png "Weather app")
+
 ## Project goals:
 
 This weather app uses OpenWeatherMap API to provide the weather. In addition, it uses Google Geocoding API in order to allow users to enter different inputs such
