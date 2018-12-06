@@ -43,7 +43,7 @@ const OtherRow = styled.div`
 	}
 `;
 
-class CurrentTemp extends Component {
+export class CurrentTemp extends Component {
 	render() {
 		return (
 			<Wrapper>

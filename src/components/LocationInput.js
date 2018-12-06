@@ -23,7 +23,7 @@ const Form = styled.form`
 	}
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
 	background-color: #f06449;
 	color: #282510;
 	font-size: 1rem;
@@ -32,7 +32,7 @@ const Button = styled.button`
 	text-align: center;
 `;
 
-class LocationInput extends Component {
+export class LocationInput extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -53,7 +53,7 @@ class LocationInput extends Component {
 		this.setState({ address: "" });
 	}
 
-	handleClick = e => {
+	handleClick(e) {
 		e.preventDefault();
 
 		this.props.getGeoLocation(this.state.address);

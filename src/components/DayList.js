@@ -3,23 +3,23 @@ import Day from "./Day";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
-const ListContainer = styled.ul`
+export const ListContainer = styled.ul`
 	padding-left: 0;
 	margin-top: 0;
 	margin-bottom: 0;
 `;
 
-class DayList extends Component {
+export class DayList extends Component {
 	render() {
 		const listofDays = this.props.date.map((number, index) => (
 			<Day
 				key={index}
-				icon={this.props.date[index].weather[0].icon}
-				date={this.props.date[index].dt_txt.slice(5, 10)}
-				temperature={this.props.date[index].main.temp}
-				humidity={this.props.date[index].main.humidity}
-				wind={this.props.date[index].wind.speed}
-				forecast={this.props.date[index].weather[0].main}
+				// icon={this.props.date[index].weather[0].icon}
+				// date={this.props.date[index].dt_txt.slice(5, 10)}
+				// temperature={this.props.date[index].main.temp}
+				// humidity={this.props.date[index].main.humidity}
+				// wind={this.props.date[index].wind.speed}
+				// forecast={this.props.date[index].weather[0].main}
 			/>
 		));
 
